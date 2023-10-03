@@ -17,7 +17,7 @@ Enhance your Lingo development experience in VS Code with comprehensive syntax h
 
 ## Usage
 
-Simply open any `.lingo` file or set the file's language mode to Lingo to enjoy enhanced syntax highlighting.
+Simply open any `.ls` file or set the file's language mode to Lingo to enjoy enhanced syntax highlighting.
 
 ## Known Issues
 
