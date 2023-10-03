@@ -3,7 +3,7 @@
   "displayName": "Lingo Syntax Highlighting",
   "description": "Lingo Syntax Highlighting for VS Code",
   "publisher": "markhughes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.82.0"
   },
