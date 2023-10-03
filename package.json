@@ -1,0 +1,39 @@
+{
+  "name": "director-lingo",
+  "displayName": "Lingo Syntax Highlighting",
+  "description": "Lingo Syntax Highlighting for VS Code",
+  "publisher": "markhughes",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "lingo",
+        "aliases": [
+          "Lingo",
+          "lingo"
+        ],
+        "extensions": [
+          ".ls"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "lingo",
+        "scopeName": "source.lingo",
+        "path": "./syntaxes/lingo.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:markhughes/vscode-lingo-director.git"
+  }
+}

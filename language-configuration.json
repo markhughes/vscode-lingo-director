@@ -1,0 +1,29 @@
+{
+  "comments": {
+    "lineComment": "--" // comments
+  },
+  "brackets": [
+    ["(", ")"], // function calls, conditions, etc.
+    ["[", "]"] // lists
+  ],
+  "autoClosingPairs": [
+    ["\"", "\""], // string literals
+    ["'", "'"], // string literals (if single quotes are used for this purpose)
+    ["[", "]"], // lists
+    ["(", ")"], // function calls and conditions
+    { "open": "<", "close": ">", "notIn": ["string", "comment"] }, // XML or HTML-like syntax, if applicable and ensuring it doesn't auto-close in strings/comments
+    { "open": "on", "close": "end", "notIn": ["string", "comment"] }, // handler definitions
+    { "open": "if", "close": "end if", "notIn": ["string", "comment"] }, // conditional statements
+    { "open": "repeat", "close": "end repeat", "notIn": ["string", "comment"] } // loop statements
+  ],
+  "surroundingPairs": [
+    ["\"", "\""], // string literals
+    ["'", "'"], // string literals
+    ["[", "]"], // lists
+    ["(", ")"], // function calls and conditions
+    { "open": "<", "close": ">", "notIn": ["string", "comment"] },
+    { "open": "on", "close": "end", "notIn": ["string", "comment"] },
+    { "open": "if", "close": "end if", "notIn": ["string", "comment"] },
+    { "open": "repeat", "close": "end repeat", "notIn": ["string", "comment"] }
+  ]
+}

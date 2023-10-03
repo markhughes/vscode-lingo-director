@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Lingo",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#function"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "comment.line.lingo",
+          "match": "--.*"
+        },
+        {
+          "name": "keyword.control.loop",
+          "match": "\\b(repeat)\\b"
+        },
+        {
+          "name": "keyword.control.loop",
+          "match": "\\b(end repeat)\\b"
+        },
+
+        {
+          "name": "keyword.control.conditional",
+          "match": "\\b(case|if|else|then)\\b"
+        },
+        {
+          "name": "keyword.control.conditional",
+          "match": "\\b(end case|end if|end)\\b"
+        },
+        {
+          "name": "constant.language.boolean",
+          "match": "\\b(true|false)\\b"
+        },
+        {
+          "name": "variable.language",
+          "match": "\\b(global|property)\\b"
+        },
+        {
+          "name": "constant.numeric.integer",
+          "match": "\\b\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.float",
+          "match": "\\b\\d+\\.\\d*\\b"
+        },
+        {
+          "name": "constant.numeric.float",
+          "match": "\\b\\.\\d+\\b"
+        },
+        {
+          "name": "keyword.operator",
+          "match": "[<>+\\*^/\\\\=-]"
+        },
+        {
+          "name": "keyword.operator",
+          "match": "\\#"
+        },
+        {
+          "name": "string.quoted.double",
+          "begin": "\"",
+          "end": "\""
+        },
+        {
+          "name": "keyword.statement.lingo",
+          "match": "\\b(abort|after|and|before|do|down|end|halt|ilk|in|into|me|new|not|of|on|or|otherwise|pass|put|result|return|set|tell|the|to|with)\\b"
+        },
+        {
+          "name": "support.function",
+          "match": "\b(?:_global|_key|_mouse|_movie|_player|_sound|_systemabbr|abbrev|abbreviated|abs|actionsenabled|activateapplication|activatewindow|active3drenderer|activecastlib|activewindow|actorlist|add|addat|addbackdrop|addcamera|addchildaddmodifier|addoverlay|addprop|addtoworld|addvertex|alert|alerthook|alignment|allowcustomcaching|allowgraphicmenu|allowsavelocal|allowtransportcontrol|allowvolumecontrolallowzooming|alphathreshold|ambient|ambientcolor|ancestor|angle|anglebetween|animationenabled|antialias|antialiasthreshold|append|applicationname|applicationpath|appminimizeatan|attenuation|attributevalue|auto|autoblend|automask|autotab|axisangleback|backcolor|backdrop|backgroundcolor|backspace|beep|beepon|beginrecording|beginsprite|beveldepth|beveltype|bgcolor|bias|bitand|bitmap|bitmapsizes|bitnot|bitor|bitratebitspersample|bitxor|blend|blendconstant|blendconstantlist|blendfactor|blendfunction|blendfunctionlist|blendlevel|blendrange|blendsource|blendsourcelist|blendtime|bonebonesplayer|border|both|bottom|bottomcap|bottomradius|bottomspacing|boundary|boundingsphere|box|boxdropshadow|boxtype|breakconnection|breakloop|brightness|broadcastpropsbrowsername|buffersize|build|buttonsenabled|buttonstyle|buttontype|bytesstreamed|booleancachedocverify|cachesize|call|callancestor|camera|cameracount|cameraposition|camerarotation|cancelidleload|castlib|castlibnum|castmemberlist|center|centerregpoint|centerstagechangearea|channelcount|char|characterset|charpostoloc|chars|charspacing|chartonum|checkboxaccess|checkboxtype|checkmark|checknetmessages|child|chunksize|clearatrenderclearcache|clearerror|clearframe|clearglobals|clearvalue|clickloc|clickmode|clickon|clone|clonedeep|clonemodelfromcastmember|clonemotionfromcastmember|close|closed|closewindowclosexlib|collision|collisiondata|collisionnormal|color|world|colorbuffer|colorbufferdepth|colordepth|colorlist|colorrange|colors|colorsteps|commanddown|comments|compressed|connecttonetserverconstrainh|constraint|constrainv|continue|controldown|controller|copypixels|copyrightinfo|copyto|copytoclipboard|cos|count|cpuhogticks|creaseangle|creases\\[contains\\]createfolder|createmask|creatematte|creationdate|creator|crop|cross|crossproduct|cuepassed|cuepointnames|cuepointtimes|currentloopstate|currentspritenum|currenttimecursor|cursorsize|curve|cylinderdate|day|deactivateapplication|deactivatewindow|debug|debugplaybackenabled|decaymode|defaultrect|defaultrectmode|delay|delete|deleteall|deleteat|deletecamera|deletefolderdeleteframe|deletegroup|deletelight|deletemodel|deletemodelresource|deletemotion|deleteone|deleteprop|deleteshader|deletetexture|deletevertex|density|depth|depthbufferdepthdesktoprectlist|diffuse|diffusecolor|diffuselightmap|digitalvideotimescale|digitalvideotype|direction|directionalcolor|directionalpreset|directtostagedisableimagingtransformation|displayface|displaymode|distanceto|distribution|dither|done|doneparsing|dot|dotproduct|doubleclick|downloadnetthing|drag|draw|drawrect|dropshadowduplicate|duplicateframe|durationeditable|editshortcutsenabled|elapsedtime|emissive|emitter|empty|emulatemultibuttonmouse|enabled|enablehotspot|endangle|endcolor|endframe|endrecording|endsprite|endtime|enterenterframe|environment|erase|error|eventpassmode|exchange|exists|exit|exitframe|exitlock|exp|externalevent|externalparamcount|externalparamname|externalparamvalue|extractalphaextrude3dface|fadein|fadeout|fadeto|far|field|fieldofview|filename|fill|fillcolor|fillcycles|filldirection|filled|fillmode|filloffset|fillscale|findempty|findlabel|findpos|findposnearfinishidleload|firstindent|fixedlinespace|fixedrate|fixstagesize|flashrect|flashtostage|flat|fliph|flipv|float|floatp|floatprecision|flush|flushinputevents|fog|folderchar|fontfontsize|fontstyle|forecolor|forget|frame|framecount|framelabel|framepalette|framerate|frameready|framescript|framesound1|framesound2|framestohms|frametempo|frametransitionfreeblock|freebytes|fromcastmember|fromimageobject|front|frontwindowgeneratenormals|getaprop|getat|getbehaviordescription|getbehaviortooltip|getboneid|geterror|geterrorstring|gethardwareinfo|gethotspotrect|getlast|getlatestnetidgetnetaddresscookie|getneterrorstring|getnetmessage|getnetoutgoingbytes|getnettext|getnormalized|getnthfilenameinfolder|getnumberwaitingnetmessages|getonegetpeerconnectionlist|getpixel|getplaylist|getpos|getpref|getprop|getpropat|getpropertydescriptionlist|getrendererservices|getstreamstatus|gettemppath|getworldtransformglobals|glossmap|go|gotoframe|gotonetmovie|gotonetpage|gradienttype|gravity|grouphandler|handlers|height|heightvertices|high|highlightpercentage|highlightstrength|hilite|hither|hittest|hmstoframes|hold|hotspot|html|hyperlink|hyperlinkclicked|hyperlinkrangehyperlinks|hyperlinkstateid3tags|identity|idle|idlehandlerperiod|idleloaddone|idleloadmode|idleloadperiod|idleloadtag|idlereadchunksize|ilk|image|imagecompression|imageenabled|imagequality|immovableimportfileinto|inflate|ink|inker|inlineimeenabled|insertbackdrop|insertframe|insertoverlay|inside|installmenu|instance|integer|integerp|interface|interpolate|interpolateto|intersectindex|interval|inverse|invert|invertmask|isbusy|isinworld|isoktoattach|ispastcuepoint|item|itemdelimiterkerning|kerningthreshold|key|keyboardfocussprite|keycode|keydown|keydownscript|keyframeplayer|keypressed|keyup|keyupscriptlabel|labellist|last|lastchannel|lastclick|lastevent|lastframe|lastkey|lastroll|left|leftindent|length|lengthvertices|level|lifetime|light|line|linearlist|linecolor|linecountlinedirection|lineheight|lineoffset|linepostolocv|linesize|linkas|linked|list|listp|loaded|loadfile|loc|loch|locked|locktranslation|loctocharpos|locv|locvtolinepos|locz|lodlog|long|loop|loopcount|loopendtime|loopsremaining|loopstarttimemachinetype|magnitude|map|mapImageToStage|mapmembertostage|mapstagetomember|margin|marker|markerlist|mask|max|maxinteger|maxspeed|mci|media|mediaready|member|membernum|members|memorysize|menumesh|meshdeform|milliseconds|min|minspeed|modal|mode|model|modela|modelb|modelresource|modelsunderloc|modelsunderray|modelunderloc|modified|modifiedby|modifieddate|modifiermodifiers|month|mostrecentcuepoint|motion|mousechar|mousedown|mousedownscript|mouseenter|mouseh|mouseitem|mouseleave|mouselevel|mouseline|mouseloc|mousemember|mouseoverbuttonmouseup|mouseupoutside|mouseupscript|mousev|mousewithin|mouseword|move|moveablesprite|movetoback|movetofront|movevertex|movevertexhandle|movewindow|movie|movieaboutinfomoviecopyrightinfo|moviefilefreesize|moviefilesize|moviefileversion|movieimagecompression|movieimagequality|moviename|moviepath|movierate|movietime|moviextralist|mpeglayermultiply|multisoundname|near|nearfiltering|neighbor|netabort|netdone|neterror|netlastmoddate|netmime|netpresent|netstatus|nettextresult|netthrottleticks|newcamera|newcurve|newgroup|newlightnewmesh|newmodel|newmodelresource|newmotion|newshader|newtexture|next|none|normalize|normallist|normals|nothing|notify|nudge|number|numchannels|numparticles|numsegments|numtocharobjectp|offset|open|openresfile|openwindow|openxlib|optiondown|organizationname|originalfont|originh|originmode|originpoint|originv|orthoheight|overlaypageheight|palette|palettemapping|paletteref|paletteindexpan|paragraph|param|paramcount|parent|parsestring|particle|pasteclipboardinto|path|pathname|pathstrength|pattern|pausepausedatstart|pausestate|percentplayed|percentstreamed|period|perpendicularto|persistent|pi|picture|picturep|plane|platform|play|playbackmode|playfile|playing|playlistplaynext|playrate|point|pointat|pointatorientation|pointinhyperlink|pointofcontact|pointtochar|pointtoitem|pointtoline|pointtoparagraph|pointtoword|position|positionresetposterframe|postnettext|power|preferred3drenderer|preload|preloadbuffer|preloadeventabort|preloadmember|preloadmode|preloadmovie|preloadnetthing|preloadram|preloadtimepremultiply|prepareframe|preparemovie|prerotate|prescale|pretranslate|previous|primitives|printfrom|productversion|projection|projectionangle|propList|proxyserver|pttohotspotid|puppetpuppetpalette|puppetsound|puppetsprite|puppettempo|puppettransition|purgepriorityqtregisteraccesskey|qtunregisteraccesskey|quad|quality|queue|quit|quoteradius|ramneeded|random|randomseed|randomvector|rateshift|rawnew|read|readvalue|recordfont|rect|ref|reflectionmap|reflectivity|region|registerforevent|registerscript|regpointregpointvertex|removebackdrop|removefromworld|removelast|removemodifier|removeoverlay|rename|renderer|rendererdevicelist|renderformat|renderstyle|resetworld|resizewindowresolution|resolve|resolvea|resolveb|resource|restart|resume|reverttoworlddefaults|rewind|rgb|rgba4444|rgba5550|rgba5551|rgba5650|rgba8880|rgba8888|right|rightindentrightmousedown|rightmouseup|rollover|romanlingo|rootlock|rootnode|rotate|rotation|rotationreset|rtf|runmode|runpropertydialogsafeplayer|samplecount|samplerate|samplesize|save|savedlocal|savemovie|scale|scalemode|score|scorecolor|scoreselectionscript|scriptexecutionstyle|scriptinstancelist|scriptlist|scriptnumscriptsenabled|scripttext|scripttype|scrollbyline|scrollbypage|scrolltop|sds|searchcurrentfolder|searchpath|searchpaths|seconds|selectedtext|selection|selend|selstartsendallsprites|sendevent|sendnetmessage|sendsprite|serialnumber|setalpha|setaprop|setat|setcollisioncallback|setflashproperty|setnetbufferlimits|setnetmessagehandler|setpixelsetplaylist|setpref|setprop|setscriptlist|settrackenabled|setvariable|shader|shaderlist|shadowpercentage|shadowstrength|shapetype|shiftdown|shininess|shockwave3d|shortshowglobals|showlocals|showprops|showresfile|showxlib|shutdown|silhouettes|sin|size|sizerange|skew|sleep|smoothness|sort|sound|soundbusy|soundchannel|sounddevicesounddevicelist|soundenabled|soundkeepdevice|soundlevel|soundmixmedia|source|sourcerect|space|specular|specularcolor|specularlightmap|sphere|spotangle|spotdecay|spritespritenum|spritespacetoworldspace|sqrt|stage|stagebottom|stagecolor|stageleft|stageright|stagetoflash|stagetop|standard|startangle|startframe|startmovie|starttime|starttimerstate|static|status|stepframe|stilldown|stop|stopevent|stopmovie|stoptime|stream|streammode|streamname|streamsize|streamstatus|string|stringp|strokecolor|strokewidth|stylesubdivision|sweep|swing|switchcolordepth|symbol|symbolp|systemdatetab|tabcount|tabs|tan|target|tellstreamstatus|tension|text|texture|texturecoordinatelist|texturecoordinates|texturelayer|texturelist|texturemember|texturemode|texturemodelisttexturerenderformat|texturerepeat|texturerepeatlist|texturetransform|texturetransformlist|texturetype|thumbnail|ticks|tilt|time|timeout|timeouthandler|timeoutkeydowntimeoutlapsed|timeoutlength|timeoutlist|timeoutmouse|timeoutplay|timeoutscript|timer|timescale|title|titlevisible|toon|top|topcap|topradius|topspacing|trace|traceloadtracelogfile|trackcount|trackenabled|tracknextkeytime|tracknextsampletime|trackpreviouskeytime|trackprevioussampletime|trackstarttime|trackstoptime|tracktext|tracktype|trailstransform|transitiontype|translate|triggercallback|trimwhitespace|tunneldepth|tweened|tweenmode|type\\[transparent\\]union|unload|unloadmember|unloadmovie|unregisterallevents|update|updateframe|updatelock|updatemovieenabled|updatestage|url|usealpha|usediffusewithtexture|usefastquadsusehypertextstyles|uselineoffset|userdata|usernamevalue|vector|version|vertex|vertexlist|vertices|video|videoforwindowspresent|viewh|viewpoint|viewscale|viewv|visibility|visible|void|voidp|volume|volumeinfowait|waitfornetconnection|warpmode|width|widthvertices|wind|window|windowlist|windowpresent|windowtype|word|wordwrap|world|worldposition|worldspacetospritespace|worldtransformwraptransform|wraptransformlist|write|writevaluex|xaxis|xtra|xtralist|xtrasy|yaxis|year|yonz|zaxis|zoombox|zoomwindow)\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.lingo",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.lingo",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.lingo",
+      "match": "\\b\\d+\\b"
+    }
+  },
+  "scopeName": "source.lingo"
+}
